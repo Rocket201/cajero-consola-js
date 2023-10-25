@@ -18,7 +18,13 @@
         }
     }
     function retirar(){
-
+        const retiro = parseFloat(prompt("Ingrese la cantidad: "))
+        if(isNaN(retiro)|| retiro <= 0 || retiro > saldo){
+            console.log("cantidad inválida o insuficiente")
+        }else { saldo -= retiro 
+                console.log(`Ha retirado ${retiro.toFixed(2)} €`)
+                mostrarSaldo()
+    }
     }
     function transferir(){
         
