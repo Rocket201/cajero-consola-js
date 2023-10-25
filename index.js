@@ -55,7 +55,41 @@
     }
 
     function operacionesCajero(){
+        let continuar = true;
+        while(continuar){
+            console.log("Menú del cajero:")
+            console.log("1. Consultar salto")
+            console.log("2. Depositar dinero")
+            console.log("3. Retirar dinero")
+            console.log("4. Transferir dinero")
+            console.log("5. Salir")
 
+            const opcion = prompt("Elija una opción: ")
+
+            switch (opcion){
+                case "1":
+                    mostrarSaldo()
+                break;
+                case "2":
+                    depositar()
+                break;
+                case "3":
+                    retirar()
+                break;
+                case "4":
+                    transferir()
+                break;
+                case "5":
+                    console.log("gracias por usar el cajero ")
+                    continuar= false 
+                break;
+                default: 
+                console.log("Opcion no válida")
+              
+            }
+
+        } 
+        operacionesCajero()
     }
 
     /**
