@@ -40,9 +40,20 @@
     }
 
     function iniciarSesion(){
-
+        let pin = prompt("Ingrese su PIN: ")
+        while (pin !== PIN_CORRECTO && intentosRestantes > 1){
+            intentosRestantes--
+            console.log(`PIN incorrecto. Le quedan ${intentosRestantes} intentos.`)
+            pin = prompt("Ingrese su pin: ")
+        } if(pin === PIN_CORRECTO){
+            console.log("Inicio de sesion exitoso")
+            mostrarSaldo()
+            operacionesCajero()
+        }else{
+            console.log("pin incorrecto. El cajero se ha cerrado")
+        }
     }
-    
+
     function operacionesCajero(){
 
     }
